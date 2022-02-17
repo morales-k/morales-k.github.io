@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+	Krista Morales
+	Portfolio: Contact
+	02/08/2022
+-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Front-end web development portfolio." />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, React, Web development, Responsive, Front-end."
+    />
+    <meta name="author" content="Krista Morales" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact: Krista Morales</title>
+    <link rel="stylesheet" type="text/css" href="./styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Maven+Pro%7COpen+Sans"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="menu" tabindex="0" class="">
+        <span id="bar1" class="bar"></span>
+        <span id="bar2" class="bar"></span>
+        <span id="bar3" class="bar"></span>
+        <ul class="navigation" id="navigation">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./work.html">Work</a></li>
+          <li><a class="orange" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-bg" id="menu-bg"></div>
+    </header>
+    <main id="contact-main">
+      <div class="formdiv">
+        <h1>Get in touch</h1>
+        <form id="contact" name="contactform" action="" method="post">
+          <fieldset>
+            <label for="currentp">Name<span>&#42;</span></label>
+            <input
+              id="currentp"
+              name="currentp"
+              type="text"
+              tabindex="1"
+              required
+              autofocus
+            />
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="off"
+              tabindex="-1"
+            />
+            <input
+              id="message"
+              name="message"
+              type="text"
+              autocomplete="off"
+              tabindex="-1"
+            />
+
+            <label for="ltrbox">Email<span>&#42;</span></label>
+
+            <input
+              id="ltrbox"
+              name="ltrbox"
+              type="email"
+              tabindex="2"
+              required
+            />
+
+            <label for="comms">Message<span>&#42;</span></label>
+            <textarea id="comms" name="comms" tabindex="3" required></textarea>
+
+            <input type="submit" id="contactsubmit" value="Submit" />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li>
+            <a class="home" href="./index.html">Home</a>
+          </li>
+          <li>
+            <a class="work" href="./work.html">Work</a>
+          </li>
+          <li>
+            <a class="active-contact orange" href="./contact.html">Contact</a>
+          </li>
+          <li>
+            <a
+              class="github"
+              href="https://github.com/morales-k"
+              target="_blank"
+              rel="noopener"
+              >Github</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
+    <script src="./scripts/hamburger.js"></script>
+    <script src="./scripts/verify.js"></script>
+  </body>
+</html>
