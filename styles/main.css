@@ -154,6 +154,12 @@ main a.orange {
   background: url(../images/work/projectmemory.png) center center no-repeat;
   background-size: cover;
 }
+
+.tunes {
+  background: url(../images/work/projecttunes.png) center center no-repeat;
+  background-size: cover;
+}
+
 .formdiv {
   width: 98%;
   max-width: 450px;
