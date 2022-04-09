@@ -1,0 +1,89 @@
+:root {
+  --start-y-work: 0;
+  --start-y-contact: 0;
+  --end-y-contact: 0;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 8% 40% 8%;
+}
+@media screen and (min-width: 1200px) {
+  #contact {
+    margin-bottom: 20%;
+  }
+}
+
+#contact h1 {
+  color: #f2AE2E;
+  text-align: center;
+}
+
+#contactForm {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #636D70;
+  border-radius: 6px;
+  margin: 2%;
+}
+
+#contactForm fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #C6D8DC;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  margin: 0;
+  padding: 4%;
+}
+
+#contactForm label {
+  margin: 2% 4% 1% 4%;
+}
+
+#contactForm label span {
+  color: #f2AE2E;
+  font-weight: bold;
+}
+
+#contactForm input, #contactForm textarea {
+  margin: 1% 4% 6% 4%;
+  border-radius: 4px;
+  border: 2px solid #C6D8DC;
+}
+
+#contactForm input:focus, #contactForm textarea:focus {
+  outline: none;
+  border-color: #f2AE2E;
+}
+
+#contactForm textarea {
+  height: 120px;
+  resize: none;
+}
+
+#email {
+  display: none;
+}
+
+#contactForm input#contactSubmit {
+  width: 100%;
+  background-color: #C6D8DC;
+  margin: 0;
+  padding: 5% 0;
+  border-radius: 0 0 4px 4px;
+  border: none;
+  font-size: 1rem;
+}
+
+#contactForm input#contactSubmit:hover {
+  cursor: pointer;
+  background-color: #f2AE2E;
+}/*# sourceMappingURL=contact.css.map */

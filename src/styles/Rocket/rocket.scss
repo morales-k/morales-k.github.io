@@ -1,0 +1,234 @@
+@import '../Variables/variables.scss';
+@import '../Mixins/mixins.scss';
+
+#rocket {
+  @include flexCenter(column);
+  width: 60px;
+  height: 180px;
+  position: absolute;
+  transform: rotate(45deg);
+  animation: blastOff 2s linear forwards;
+}
+
+#workRocket {
+  @include flexCenter(column);
+  width: 60px;
+  height: 180px;
+  position: absolute;
+  transform: rotate(-90deg);
+  animation: workBlastOff 2s linear forwards;
+}
+
+#contactRocket {
+  @include flexCenter(column);
+  width: 60px;
+  height: 180px;
+  position: absolute;
+  transform: rotate(130deg);
+  animation: contactBlastOff 2s linear forwards;
+}
+
+.ship {
+  width: 20px;
+  height: 80px;
+  background-color: $grey;
+  border-radius: 100%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: 2;
+}
+
+.window {
+  width: 12px;
+  height: 12px;
+  background-color: $lightblue;
+  position: absolute;
+  left: 24px;
+  bottom: 100px;
+  border-radius: 50%;
+  border: 2px solid $darkblue;
+}
+
+.wing {
+  width: 10px;
+  height: 25px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 2;
+  background-color: $darkblue;
+}
+
+.left {
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 100px;
+  left: 10px;
+}
+
+.right {
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 100px;
+  right: 10px;
+}
+
+.thruster {
+  width: 20px;
+  height: 4px;
+  border-radius: 35%;
+  position: absolute;
+  bottom: 50px;
+  background-color: #000;
+}
+
+.flame-container {
+  width: 30px;
+  position: relative;
+  transform-origin: center bottom;
+  transform: rotate(135deg); // Webkit needs transform
+  -moz-transform: none;
+  rotate: 135deg; // Moz needs rotate & -moz-transform: none for proper degree.
+}
+
+.flame {
+  bottom: 0;
+  position: absolute;
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 100%;
+  transform: rotate(-45deg) scale(1,1);
+  animation: flicker 3ms 200ms ease-in infinite alternate;
+}
+
+.red {
+  left: 15px;
+  width: 25px;
+  height: 25px;
+  background:OrangeRed;
+  box-shadow: 0px 0px 5px 4px OrangeRed;
+}
+
+.orange {
+  left: 15px; 
+  width: 20px;
+  height: 20px;
+  background:orange;
+  box-shadow: 0px 0px 9px 4px orange;
+}
+
+.yellow {
+  left: 15px; 
+  width: 10px;
+  height: 10px;
+  background:gold;
+  box-shadow: 0px 0px 9px 4px gold;
+}
+
+.white {
+  left: 15px; 
+  width: 5px;
+  height: 5px;
+  background:white;
+  box-shadow: 0px 0px 9px 4px white;
+}
+
+@keyframes flicker {
+  0%   {
+    transform: rotate(-1deg);
+  }
+  20%  {
+    transform: rotate(1deg);
+  }
+  40%  {
+    transform: rotate(-1deg);
+  }
+  60%  {
+    transform: rotate(1deg) scaleY(1.04);
+  }
+  80%  {
+    transform: rotate(-2deg) scaleY(0.92);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes blastOff {
+  0% {
+    top: 120px;
+    left: -60px;
+  }
+
+  100% {
+    top: -160px;
+    left: 280px;
+  }
+}
+
+@keyframes workBlastOff {
+  0% {
+    top: var(--start-y-work);
+    left: 110%;
+  }
+
+  100% {
+    top: var(--start-y-work);
+    left: -40%;
+  }
+}
+
+  @keyframes contactBlastOff {
+    0% {
+      top: var(--start-y-contact);
+      left: -30%;
+    }
+
+    100% {
+      top: var(--end-y-contact);
+      left: 110%;
+    }
+}
+
+@media screen and (min-width: 800px) {
+  #workRocket {
+    animation: workBlastOff 3s linear forwards;
+  }
+
+  #contactRocket {
+    animation: contactBlastOff 3s linear forwards;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  #workRocket {
+    animation: workBlastOff 4s linear forwards;
+  }
+
+  #contactRocket {
+    animation: contactBlastOff 4s linear forwards;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #contactRocket {
+    transform: rotate(110deg);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #workRocket {
+    animation: workBlastOff 6s linear forwards;
+  }
+
+  #contactRocket {
+    animation: contactBlastOff 6s linear forwards;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  #workRocket {
+    animation: workBlastOff 9s linear forwards;
+  }
+
+  #contactRocket {
+    animation: contactBlastOff 9s linear forwards;
+  }
+}

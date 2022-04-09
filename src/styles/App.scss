@@ -1,0 +1,70 @@
+@import './Variables/variables.scss';
+@import './Nav/nav.scss';
+@import './Home/home.scss';
+@import './Work/work.scss';
+@import './Contact/contact.scss';
+@import './Footer/footer.scss';
+@import './Rocket/rocket.scss';
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  color: $white;
+  background: url('../assets/background_sm.png') no-repeat;
+  background-size: cover;
+
+  @media screen and (min-width: 960px) {
+    background: url('../assets/background.png') no-repeat;
+    background-size: cover;
+  }
+}
+
+* {
+  transition: 0.25s ease-in-out;
+  box-sizing: border-box;
+}
+
+#pageContainer {
+  width: 100%;
+  height: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: $lightblue;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+#desktopNav a, #home a, #work a, footer a {
+  display: inline-block;
+}
+
+#desktopNav a::after, #home a::after, #work a::after, footer a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: $gold;
+  transition: width .3s;
+}
+
+#desktopNav a:hover::after,
+#home a:hover::after, 
+#work a:hover::after, 
+footer a:hover::after {
+  width: 100%;
+}
+
+.blue {
+  color: $lightblue;
+}
+
+.hidden {
+  visibility: hidden;
+}
