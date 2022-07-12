@@ -4,6 +4,7 @@ import tunesImg from '../assets/work/projecttunes.png';
 import memoryMatchImg from '../assets/work/projectmemory.png';
 import todoImg from '../assets/work/projecttodo.png';
 import calcImg from '../assets/work/projectcalc.png';
+import colorTheoryImg from'../assets/work/projectcolortheory.png';
 import Rocket from './Rocket';
 
 function Work(props) {
@@ -47,6 +48,16 @@ function Work(props) {
             <a href="https://morales-k.github.io/Tunes/" target="_blank">View project</a>
           </div>
         </div> */}
+
+        <div className="project">
+          <p className="title">Color Theory</p>
+          <img src={colorTheoryImg} alt="To-do list app." />
+          <p>A color theory game using React and a responsive canvas. Select color pairs to mix and create new colors.</p>
+          <div className="view-links">
+            <a href="https://github.com/morales-k/Color-Theory" target="_blank">View code</a>
+            <a href="https://morales-k.github.io/Color-Theory/" target="_blank">View project</a>
+          </div>
+        </div>
 
         <div className="project">
           <p className="title">To-do List</p>
