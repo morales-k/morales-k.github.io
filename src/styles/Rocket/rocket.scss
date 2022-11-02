@@ -83,7 +83,7 @@
   width: 30px;
   position: relative;
   transform-origin: center bottom;
-  transform: rotate(135deg); // Webkit needs transform
+  transform: rotate(0); // Webkit needs transform
   -moz-transform: none;
   rotate: 135deg; // Moz needs rotate & -moz-transform: none for proper degree.
 }
