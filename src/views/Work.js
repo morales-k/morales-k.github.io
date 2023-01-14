@@ -1,10 +1,10 @@
 import React, {useEffect} from 'react'
 import cactusCoImg from '../assets/work/projectcactusco.png';
-import tunesImg from '../assets/work/projecttunes.png';
 import memoryMatchImg from '../assets/work/projectmemory.png';
 import todoImg from '../assets/work/projecttodo.png';
 import calcImg from '../assets/work/projectcalc.png';
 import colorTheoryImg from'../assets/work/projectcolortheory.png';
+import brickBreakImg from '../assets/work/projectbrickbreak.png';
 import Rocket from './Rocket';
 
 function Work(props) {
@@ -28,7 +28,6 @@ function Work(props) {
             <a href="https://morales-k.github.io/Memory-Match/" target="_blank">View project</a>
           </div>
         </div>
-
         <div className="project">
           <p className="title">Cactus Co.</p>
           <img src={cactusCoImg} alt="Website selling succulents and cacti." />
@@ -38,27 +37,24 @@ function Work(props) {
             <a href="https://morales-k.github.io/CactusCo/" target="_blank">View project</a>
           </div>
         </div>
-
-        {/* <div className="project">
-          <p className="title">Tunes - Media Player</p>
-          <img src={tunesImg} alt="Media player project." />
-          <p>A React and CSS media player using React h5 Audio Player and the Radio Browser API. Select from several categories of music.</p>
-          <div className="view-links">
-            <a href="https://github.com/morales-k/Tunes" target="_blank">View code</a>
-            <a href="https://morales-k.github.io/Tunes/" target="_blank">View project</a>
-          </div>
-        </div> */}
-
         <div className="project">
           <p className="title">Color Theory</p>
-          <img src={colorTheoryImg} alt="To-do list app." />
+          <img src={colorTheoryImg} alt="A color theroy game." />
           <p>A color theory game using React and a responsive canvas. Select color pairs to mix and create new colors.</p>
           <div className="view-links">
             <a href="https://github.com/morales-k/Color-Theory" target="_blank">View code</a>
             <a href="https://morales-k.github.io/Color-Theory/" target="_blank">View project</a>
           </div>
         </div>
-
+        <div className="project">
+          <p className="title">Brick Break</p>
+          <img src={brickBreakImg} alt="A brick break game." />
+          <p>A game using React and a responsive canvas. Destroy bricks. Don't let the ball fall!</p>
+          <div className="view-links">
+            <a href="https://github.com/morales-k/BrickBreak" target="_blank">View code</a>
+            <a href="https://morales-k.github.io/BrickBreak/" target="_blank">View project</a>
+          </div>
+        </div>
         <div className="project">
           <p className="title">To-do List</p>
           <img src={todoImg} alt="To-do list app." />
@@ -68,7 +64,6 @@ function Work(props) {
             <a href="https://morales-k.github.io/To-Do-List/" target="_blank">View project</a>
           </div>
         </div>
-
       <div className="project">
         <p className="title">Classic Calculator</p>
         <img src={calcImg} alt="A calculator." />
