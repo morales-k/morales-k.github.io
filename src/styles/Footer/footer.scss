@@ -1,6 +1,15 @@
 @import '../Variables/variables.scss';
 @import '../Mixins/mixins.scss';
 
+$homeIcon: '../../assets/footer/home.svg';
+$homeIconHover: '../../assets/footer/activehome.svg';
+$workIcon: '../../assets/footer/work.svg';
+$workIconHover: '../../assets/footer/activework.svg';
+$contactIcon: '../../assets/footer/contact.svg';
+$contactIconHover: '../../assets/footer/activecontact.svg';
+$githubIcon: '../../assets/footer/github.svg';
+$githubIconHover: '../../assets/footer/activegithub.svg';
+
 footer {
   height: 140px;
   display: flex;
@@ -31,34 +40,43 @@ footer ul li a {
   padding-bottom: 80px;
 }
 
+// Preload hover images to prevent flashing.
+footer::after{
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  content: url($homeIconHover) url($workIconHover) url($contactIconHover) url($githubIconHover);
+}
+
 .footer-home {
-  background: url('../../assets/footer/home.svg') center center no-repeat;
+  background: url($homeIcon) center center no-repeat;
 }
 
 .footer-work {
-  background: url('../../assets/footer/work.svg') center center no-repeat;
+  background: url($workIcon) center center no-repeat;
 }
 
 .footer-contact {
-  background: url('../../assets/footer/contact.svg') center center no-repeat;
+  background: url($contactIcon) center center no-repeat;
 }
 
 .footer-github {
-  background: url('../../assets/footer/github.svg') center center no-repeat;
+  background: url($githubIcon) center center no-repeat;
 }
 
 .footer-home:hover {
-  background: url('../../assets/footer/activehome.svg') center center no-repeat;
+  background: url($homeIconHover) center center no-repeat;
 }
 
 .footer-work:hover {
-  background: url('../../assets/footer/activework.svg') center center no-repeat;
+  background: url($workIconHover) center center no-repeat;
 }
 
 .footer-contact:hover {
-  background: url('../../assets/footer/activecontact.svg') center center no-repeat;
+  background: url($contactIconHover) center center no-repeat;
 }
 
 .footer-github:hover {
-  background: url('../../assets/footer/activegithub.svg') center center no-repeat;
+  background: url($githubIconHover) center center no-repeat;
 }
