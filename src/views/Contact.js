@@ -1,7 +1,8 @@
-import React, {useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Rocket from './Rocket'
 
 function Contact(props) {
+  const [sbMail, setSbMail] = useState(false);
 
   useEffect(() => {
     props.getOffset('contact');
@@ -13,7 +14,7 @@ function Contact(props) {
         props.contactVisible ? <Rocket animate={'contactRocket'} /> : null
       }
       <h1>Get in touch</h1>
-        <form id="contactForm" name="contactform" action="" method="post">
+        <form id="contactForm" name="contactform" action={sbMail ? "" : "https://formspree.io/f/xnqwdvpr"} method="post">
           <fieldset>
             <label htmlFor="name">Name<span>&#42;</span></label>
             <input
@@ -29,6 +30,7 @@ function Contact(props) {
               type="email"
               autoComplete="off"
               tabIndex="-1"
+              onChange={() => setSbMail(true)}
             />
             <label htmlFor="ltrbox">Email<span>&#42;</span></label>
             <input
