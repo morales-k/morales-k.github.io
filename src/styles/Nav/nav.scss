@@ -7,7 +7,7 @@
 
 #menuToggle span, #hamburger span {
   display: block;
-  background: $darkblue;
+  background: $grey;
   border-radius: 2px;
 }
 
@@ -16,13 +16,8 @@
   height: 54px;
   position: relative;
   cursor: pointer;
-  background: $grey;
   border-radius: 5px;
   margin: 4% 0 0 4%;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.8);
-  }
 
   #hamburger {
     @include flexCenter(column);
@@ -114,7 +109,6 @@ nav#hamNav ul {
 }
 
 nav#hamNav ul li {
-  background-color: rgba(233, 239, 243, 0.2);
   border-bottom: 2px solid rgba(233, 239, 243, 0.3);
   border-radius: 2px;
   margin: 10% 0;
