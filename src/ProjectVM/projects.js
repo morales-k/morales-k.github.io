@@ -1,9 +1,9 @@
-import memoryMatchImg from "../assets/work/projectmemory.png";
-import cactusCoImg from "../assets/work/projectcactusco.png";
-import colorTheoryImg from "../assets/work/projectcolortheory.png";
-import todoImg from '../assets/work/projecttodo.png';
-import calcImg from '../assets/work/projectcalc.png';
-import brickBreakImg from '../assets/work/projectbrickbreak.png';
+import memoryMatchImg from "../assets/work/memorymatch.png";
+import cactusCoImg from "../assets/work/cactusco.png";
+import colorTheoryImg from "../assets/work/colortheory.png";
+import todoImg from '../assets/work/todolist.png';
+import calcImg from '../assets/work/calculator.png';
+import brickBreakImg from '../assets/work/brickbreak.png';
 
 export const memoryMatch = {
     title: "Memory Match",
