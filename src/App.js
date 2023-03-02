@@ -1,10 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
 import './styles/App.scss';
-import Nav from './views/Nav';
-import Home from './views/Home';
-import Work from './views/Work';
-import Contact from './views/Contact';
-import Footer from './views/Footer';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import Work from './components/Work';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [homeVisible, setHomeVisible] = useState(false);
