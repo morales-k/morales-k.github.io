@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 const Project = (props) => {
     const { project } = props;
     const [showOverlay, setOverlay] = useState(false);
-    const [showClose, setShowClose] = useState(true);
+    const [showClose, setShowClose] = useState(null);
 
     const handleDisplay = (e, bool) => {
         if (showClose && 
             (e.type === "mouseenter" || 
              e.type === "mouseleave")) {
             setShowClose(false);
-        } else {
+        } else if (e.type === "touchstart") {
             setShowClose(true);
         }
         setOverlay(bool);
