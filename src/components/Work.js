@@ -1,29 +1,46 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Rocket from './Rocket';
 import Project from './Project';
 import * as project from "../ProjectVM/projects";
 
 function Work(props) {
-  
-  useEffect(() => {
-	  props.getOffset('work');
-  }, []);
+	const [selection, setSelection] = useState(null);
 
-  return (
-    <div id="work" ref={props.workRef}>
-		{
-			props.workVisible ? <Rocket animate={'workRocket'} /> : null
+	const removeSelection = (e) => {
+		if (e.target.tagName !== "IMG") {
+			setSelection(null);
 		}
-      	<div className="project-container">
-      	  <Project project={project.memoryMatch} />
-          <Project project={project.cactusCo} />
-		  <Project project={project.colorTheroy} />
-		  <Project project={project.brickBreak} />
-          <Project project={project.todoList} />
-		  <Project project={project.calculator} />
-    	</div>
-    </div>
-  )
+	};
+
+	useEffect(() => {
+		props.getOffset('work');
+
+		window.addEventListener("click", (e) => {
+			if (e.target.tagName !== "IMG") {
+				setSelection(null);
+		  }
+		})
+
+		return () => {
+			window.removeEventListener('click', () => null);
+		  };
+	}, []);
+
+	return (
+		<div id="work" ref={props.workRef} onClick={(e) => removeSelection(e)}>
+			{
+				props.workVisible ? <Rocket animate={'workRocket'} /> : null
+			}
+			<div className="project-container">
+				<Project project={project.memoryMatch} selection={selection} setSelection={setSelection} />
+				<Project project={project.cactusCo} selection={selection} setSelection={setSelection} />
+				<Project project={project.colorTheroy} selection={selection} setSelection={setSelection} />
+				<Project project={project.brickBreak} selection={selection} setSelection={setSelection} />
+				<Project project={project.todoList} selection={selection} setSelection={setSelection} />
+				<Project project={project.calculator} selection={selection} setSelection={setSelection} />
+			</div>
+		</div>
+	)
 }
 
 export default Work

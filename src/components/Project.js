@@ -1,35 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Project = (props) => {
-    const { project } = props;
+    const { project, selection, setSelection } = props;
     const [showOverlay, setOverlay] = useState(false);
-    const [hovering, setHovering] = useState(false);
 
-    const handleHover = (bool) => {
-        setHovering(true);
-        setOverlay(bool);
-    };
-
-    const handleClick = (bool) => {
-        setHovering(false);
-        setOverlay(bool);
-    };
+    useEffect(() => {
+        if (selection === project.title) {
+            setOverlay(true);
+        } else {
+            setOverlay(false);
+        }
+    }, [selection]);
 
     return (
         <div className="project"
-             onMouseEnter={() => handleHover(true)}
-             onMouseLeave={() => handleHover(false)}
-             onTouchStart={() => handleClick(true)}>
+             onClick={() => setSelection(project.title)}>
             {
               showOverlay ? 
               <div className="overlay">
-                  <span className={hovering ? "hidden" : "close"}
-                        onClick={() => handleClick(false)}>X</span>
                   <p className="title">{project.title}</p>
                   <p>{project.description}</p>
                   <div className="view-links">
-                    <a href={project.codeLink} target="_blank">View code</a>
-                    <a href={project.projectLink} target="_blank">View project</a>
+                    <a href={project.codeLink} target="_blank" rel="noreferrer">View code</a>
+                    <a href={project.projectLink} target="_blank" rel="noreferrer">View project</a>
                   </div>
               </div> : null
             }
