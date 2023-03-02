@@ -52,18 +52,21 @@ function App() {
   // Set intersection observers for refs to trigger animations.
   useEffect(() => {
     const observer = new IntersectionObserver(callback, options);
+    const currentHomeRef = homeRef.current;
+    const currentWorkRef = workRef.current;
+    const currentContactRef = contactRef.current;
     
-    if (homeRef.current || workRef.current || contactRef.current) {
-      observer.observe(homeRef.current);
-      observer.observe(workRef.current);
-      observer.observe(contactRef.current);
+    if (currentHomeRef || currentWorkRef || currentContactRef) {
+      observer.observe(currentHomeRef);
+      observer.observe(currentWorkRef);
+      observer.observe(currentContactRef);
     }
 
     return () => {
-      if (homeRef.current || workRef.current || contactRef.current) {
-        observer.unobserve(homeRef.current);
-        observer.unobserve(workRef.current);
-        observer.unobserve(contactRef.current);
+      if (currentHomeRef || currentWorkRef || currentContactRef) {
+        observer.unobserve(currentHomeRef);
+        observer.unobserve(currentWorkRef);
+        observer.unobserve(currentContactRef);
       }
     }
   }, [homeRef, workRef, contactRef, options]);
