@@ -11,7 +11,7 @@ function Home(props) {
       <p>I'm a 
         <TypingEffect
           words={words}
-          keySpeed={200}
+          keySpeed={100}
           maxPauseAmount={8} /> 
         software developer who creates responsive websites and apps.
       </p>
