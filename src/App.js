@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef } from 'react';
-import './styles/App.scss';
 import Nav from './components/Nav';
 import Home from './components/Home';
 import Work from './components/Work';
