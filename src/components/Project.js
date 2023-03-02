@@ -3,34 +3,29 @@ import React, { useState } from 'react';
 const Project = (props) => {
     const { project } = props;
     const [showOverlay, setOverlay] = useState(false);
-    const [showClose, setShowClose] = useState(null);
+    const [showClose, setShowClose] = useState(false);
 
-    const handleDisplay = (e, bool) => {
-        if (showClose && 
-            (e.type === "mouseenter" || 
-             e.type === "mouseleave")) {
-            setShowClose(false);
-        } else if (e.type === "touchstart") {
-            setShowClose(true);
-        }
+    const handleHover = (bool) => {
+        setShowClose(false);
         setOverlay(bool);
+    };
+
+    const handleClick = () => {
+        setShowClose(true);
+        setOverlay(true);
     };
 
     return (
         <div className="project"
-             onMouseEnter={e => handleDisplay(e, true)}
-             onMouseLeave={e => handleDisplay(e, false)}
-             onTouchStart={e => handleDisplay(e, true)}>
+             onMouseEnter={() => handleHover(true)}
+             onMouseLeave={() => handleHover(false)}
+             onTouchStart={() => handleClick()}>
             {
               showOverlay ? 
               <div className="overlay">
-                  {
-                    showClose ? 
-                    <span 
-                      className="close"
-                      onClick={e => handleDisplay(e, false)}
-                      onTouchStart={e => handleDisplay(e, false)}>X</span> : null
-                  }
+                  <span 
+                    className={showClose ? "close" : "hidden"}
+                    onClick={() => setOverlay(false)}>X</span>
                   <p className="title">{project.title}</p>
                   <p>{project.description}</p>
                   <div className="view-links">
