@@ -10,7 +10,7 @@ function Work(props) {
   }, []);
 
   return (
-		<div id="work" ref={props.workRef}>
+    <div id="work" ref={props.workRef}>
 		{
 			props.workVisible ? <Rocket animate={'workRocket'} /> : null
 		}
