@@ -32,6 +32,7 @@ function Work(props) {
 				props.workVisible ? <Rocket animate={'workRocket'} /> : null
 			}
 			<div className="project-container">
+				<h1>Projects</h1>
 				<Project project={project.memoryMatch} selection={selection} setSelection={setSelection} />
 				<Project project={project.cactusCo} selection={selection} setSelection={setSelection} />
 				<Project project={project.colorTheroy} selection={selection} setSelection={setSelection} />
