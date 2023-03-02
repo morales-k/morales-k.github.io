@@ -10,7 +10,7 @@ const Project = (props) => {
         } else {
             setOverlay(false);
         }
-    }, [selection]);
+    }, [project, selection]);
 
     return (
         <div className="project"

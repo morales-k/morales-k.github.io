@@ -24,7 +24,7 @@ function Work(props) {
 		return () => {
 			window.removeEventListener('click', () => null);
 		  };
-	}, []);
+	}, [props]);
 
 	return (
 		<div id="work" ref={props.workRef} onClick={(e) => removeSelection(e)}>
