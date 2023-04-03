@@ -1,6 +1,6 @@
 import memoryMatchImg from "../assets/work/memorymatch.png";
 import cactusCoImg from "../assets/work/cactusco.png";
-import colorTheoryImg from "../assets/work/colortheory.png";
+import map3DImg from "../assets/work/proceduralmap3d.png";
 import todoImg from '../assets/work/todolist.png';
 import calcImg from '../assets/work/calculator.png';
 import brickBreakImg from '../assets/work/brickbreak.png';
@@ -14,6 +14,15 @@ export const memoryMatch = {
     projectLink: "https://morales-k.github.io/Memory-Match/"
 };
 
+export const proceduralMap3D = {
+  title: "3D Procedural Map",
+  imgSrc: map3DImg,
+  imgAlt: "An interactive, procedurally generated 3D map.",
+  description: "An interactive, procedurally generated 3D map, built with Three.js and GSAP.",
+  codeLink: "https://github.com/morales-k/3D-Procedural-Map",
+  projectLink: "https://morales-k.github.io/3D-Procedural-Map/"
+};
+
 export const cactusCo = {
     title: "Cactus Co.",
     imgSrc: cactusCoImg,
@@ -21,15 +30,6 @@ export const cactusCo = {
     description: "A modern website selling succulents and cacti. Featuring a dynamic shopping cart and form validation.",
     codeLink: "https://github.com/morales-k/CactusCo",
     projectLink: "https://morales-k.github.io/CactusCo/"
-};
-
-export const colorTheroy = {
-    title: "Color Theory",
-    imgSrc: colorTheoryImg,
-    imgAlt: "A color theroy game.",
-    description: "A color theory game using React and a responsive canvas. Select color pairs to mix and create new colors.",
-    codeLink: "https://github.com/morales-k/Color-Theory",
-    projectLink: "https://morales-k.github.io/Color-Theory/"
 };
 
 export const brickBreak = {

@@ -35,7 +35,7 @@ function Work(props) {
 				<h1>Projects</h1>
 				<Project project={project.memoryMatch} selection={selection} setSelection={setSelection} />
 				<Project project={project.cactusCo} selection={selection} setSelection={setSelection} />
-				<Project project={project.colorTheroy} selection={selection} setSelection={setSelection} />
+				<Project project={project.proceduralMap3D} selection={selection} setSelection={setSelection} />
 				<Project project={project.brickBreak} selection={selection} setSelection={setSelection} />
 				<Project project={project.todoList} selection={selection} setSelection={setSelection} />
 				<Project project={project.calculator} selection={selection} setSelection={setSelection} />
