@@ -9,7 +9,7 @@ function Footer() {
             <a className="footer-home" href="#home">Home</a>
           </li>
           <li>
-            <a className="footer-work" href="#work">Work</a>
+            <a className="footer-work" href="#work">Projects</a>
           </li>
           <li>
             <a className="footer-contact" href="#contact">Contact</a>

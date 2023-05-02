@@ -29,14 +29,14 @@ function Nav() {
       <nav id="hamNav" className={navClass}>
         <ul>
           <li className={showMenu ? 'grow' : 'shrink'}><a href="#home" onClick={() => toggleMenu(false)}>Home</a></li>
-          <li className={showMenu ? 'grow' : 'shrink'}><a href="#work" onClick={() => toggleMenu(false)}>Work</a></li>
+          <li className={showMenu ? 'grow' : 'shrink'}><a href="#work" onClick={() => toggleMenu(false)}>Projects</a></li>
           <li className={showMenu ? 'grow' : 'shrink'}><a href="#contact" onClick={() => toggleMenu(false)}>Contact</a></li>
         </ul>
       </nav>
       <nav id="desktopNav">
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#work">Work</a></li>
+          <li><a href="#work">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
