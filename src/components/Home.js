@@ -15,7 +15,7 @@ function Home(props) {
           maxPauseAmount={8} /> 
         software developer who creates responsive websites and apps.
       </p>
-      <p>Check out my <a href="#work">work</a> or <a href="https://github.com/morales-k" target="_blank" rel="noopener">view the code</a> on Github.
+      <p>Check out my <a href="#work">projects</a> or <a href="https://github.com/morales-k" target="_blank" rel="noopener">view the code</a> on Github.
       </p>
       {
         props.homeVisible ? <Rocket animate={'rocket'} /> : null

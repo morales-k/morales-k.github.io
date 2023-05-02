@@ -1,0 +1,1 @@
+A portfolio showcasing animations and projects built with JavaScript, React, CSS and SCSS. When clicked, each project provides a brief description, a link to the project itself, and a link to the source code on Github.
