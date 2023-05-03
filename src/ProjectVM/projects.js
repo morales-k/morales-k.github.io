@@ -2,8 +2,8 @@ import memoryMatchImg from "../assets/work/memorymatch.png";
 import cactusCoImg from "../assets/work/cactusco.png";
 import map3DImg from "../assets/work/proceduralmap3d.png";
 import todoImg from '../assets/work/todolist.png';
-import calcImg from '../assets/work/calculator.png';
 import brickBreakImg from '../assets/work/brickbreak.png';
+import popMoviesImg from '../assets/work/popmovies.png';
 
 export const memoryMatch = {
     title: "Memory Match",
@@ -50,11 +50,11 @@ export const todoList = {
     projectLink: "https://morales-k.github.io/To-Do-List/"
 };
 
-export const calculator = {
-    title: "Classic Calculator",
-    imgSrc: calcImg,
-    imgAlt: "A calculator built with JavaScript.",
-    description: "A classic calculator with all the basics. Square roots, decimals and negative numbers included! Built using JavaScript and CSS.",
-    codeLink: "https://github.com/morales-k/Calculator",
-    projectLink: "https://morales-k.github.io/Calculator/"
+export const popMovies = {
+  title: "Popular Movies",
+  imgSrc: popMoviesImg,
+  imgAlt: "Next.js project showcasing popular movies.",
+  description: "A project showcasing popular movies with release dates and details. Built using Next.js & Tailwind.",
+  codeLink: "https://github.com/morales-k/Next13-Movie-Project",
+  projectLink: "https://next13-movie-project-qhq268m5n-morales-k.vercel.app/"
 };
